@@ -62,9 +62,9 @@ M.highlights.term_cursor = Highlight.new("TermCursor", { bg = c.yellow })
 ---Error messages on the command line
 M.highlights.error_msg = Highlight.new("ErrorMsg", { fg = c.white, bg = c.red })
 ---The column separating vertically split windows
-M.highlights.vert_split = Highlight.new("VertSplit", { fg = c["fg+2"], bg = c["bg+1"] })
+M.highlights.vert_split = Highlight.new("VertSplit", { fg = c["bg+2"], bg = c.none })
 ---The column separating vertically split windows
-M.highlights.win_separator = Highlight.new("WinSeparator", { fg = c["bg+2"], bold = opts.bold })
+M.highlights.win_separator = Highlight.new("WinSeparator", { fg = c["bg+2"], bg = c.none })
 ---Line used for closed folds
 M.highlights.folded = Highlight.new("Folded", { fg = c.brown, bg = c["bg+2"], italic = opts.italic.folds })
 ---'foldcolumn'
@@ -78,7 +78,7 @@ M.highlights.line_number = Highlight.new("LineNr", { fg = c["bg+4"] })
 ---Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 M.highlights.cursor_line_number = Highlight.new("CursorLineNr", { fg = c.yellow })
 ---The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
-M.highlights.match_paren = Highlight.new("MatchParen", { fg = c.fg, bg = c.wisteria })
+M.highlights.match_paren = Highlight.new("MatchParen", { bg = c["bg+4"] })
 ---'showmode' message (e.g., "---INSERT ---")
 M.highlights.mode_msg = Highlight.new("ModeMsg", { link = gruber_hl.fg2 })
 ---Area for messages and cmdline
@@ -118,7 +118,7 @@ M.highlights.quick_fix_line = Highlight.new("QuickFixLine", { bg = c["bg+2"], bo
 -- Search
 
 ---Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
-M.highlights.search = Highlight.new("Search", { fg = c["niagara-1"], bg = c["fg+1"] })
+M.highlights.search = Highlight.new("Search", { fg = c["fg+1"], bg = c["niagara-1"] })
 ---'incsearch' highlighting; also used for the text replaced with ":s///c"
 M.highlights.incremental_search = Highlight.new("IncSearch", { fg = c.black, bg = c["fg+2"] })
 M.highlights.current_search = Highlight.new("CurSearch", { link = M.highlights.incremental_search })
@@ -156,7 +156,7 @@ M.highlights.tab_line_sel = Highlight.new("TabLineSel", { fg = c.yellow, bg = c.
 ---Titles for output from ":set all", ":autocmd" etc.
 M.highlights.title = Highlight.new("Title", { link = gruber_hl.quartz })
 ---Visual mode selection
-M.highlights.visual = Highlight.new("Visual", { bg = c["bg+2"], reverse = opts.invert.visual })
+M.highlights.visual = Highlight.new("Visual", { bg = c["bg+3"], reverse = opts.invert.visual })
 ---Visual mode selection when vim is "Not Owning the Selection".
 M.highlights.visual_nos = Highlight.new("VisualNOS", { link = gruber_hl.red })
 ---Warning messages
