@@ -204,9 +204,11 @@ M.highlights.exception = Highlight.new("Exception", { link = gruber_hl.yellow_bo
 ---(preferred) generic Preprocessor
 M.highlights.pre_proc = Highlight.new("PreProc", { link = gruber_hl.quartz })
 ---Preprocessor #include
-M.highlights.include = Highlight.new("Include", { link = gruber_hl.quartz })
+M.highlights.include = Highlight.new("Include", { link = gruber_hl.yellow })
+M.highlights.c_include = Highlight.new("cInclude", { link = gruber_hl.yellow })
+M.highlights.c_included = Highlight.new("cIncluded", { fg = c.green })
 ---Preprocessor #define
-M.highlights.define = Highlight.new("Define", { link = gruber_hl.quartz })
+M.highlights.define = Highlight.new("Define", { link = gruber_hl.yellow })
 ---Same as Define
 M.highlights.macro = Highlight.new("Macro", { link = gruber_hl.quartz })
 ---Preprocessor #if, #else, #endif, etc.
